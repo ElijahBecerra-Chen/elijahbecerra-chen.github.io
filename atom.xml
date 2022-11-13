@@ -3,11 +3,11 @@
   <title>Elijah｜轉職筆記</title>
   
   <subtitle>夢想還是要有的，萬一實現了呢？</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://elijahbecerra-chen.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://elijahbecerra-chen.github.io/"/>
   <updated>2022-11-13T17:20:14.759Z</updated>
-  <id>http://example.com/</id>
+  <id>https://elijahbecerra-chen.github.io/</id>
   
   <author>
     <name>Elijah becerra-chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>My first blog post</title>
-    <link href="http://example.com/2022/11/14/My-first-blog-post/"/>
-    <id>http://example.com/2022/11/14/My-first-blog-post/</id>
+    <link href="https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/"/>
+    <id>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</id>
     <published>2022-11-13T17:19:54.000Z</published>
     <updated>2022-11-13T17:20:14.759Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/11/14/hello-world/"/>
-    <id>http://example.com/2022/11/14/hello-world/</id>
+    <link href="https://elijahbecerra-chen.github.io/2022/11/14/hello-world/"/>
+    <id>https://elijahbecerra-chen.github.io/2022/11/14/hello-world/</id>
     <published>2022-11-13T17:18:15.464Z</published>
     <updated>2022-11-13T17:18:15.464Z</updated>
     
