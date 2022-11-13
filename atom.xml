@@ -6,7 +6,7 @@
   <link href="https://elijahbecerra-chen.github.io/atom.xml" rel="self"/>
   
   <link href="https://elijahbecerra-chen.github.io/"/>
-  <updated>2022-11-13T17:39:08.154Z</updated>
+  <updated>2022-11-13T17:56:29.207Z</updated>
   <id>https://elijahbecerra-chen.github.io/</id>
   
   <author>
@@ -21,14 +21,16 @@
     <link href="https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/"/>
     <id>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</id>
     <published>2022-11-13T17:19:54.000Z</published>
-    <updated>2022-11-13T17:39:08.154Z</updated>
+    <updated>2022-11-13T17:56:29.207Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> hi = <span class="string">&quot;Hello World!&quot;</span></span><br></pre></td></tr></table></figure><span id="more"></span>]]></content>
-    
-    
-    <summary type="html">&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; hi = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> hi = <span class="string">&quot;Hello World!&quot;</span>;</span><br></pre></td></tr></table></figure><span id="more"></span>]]></content>
     
     
+    <summary type="html">&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; hi = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://elijahbecerra-chen.github.io/categories/JavaScript/"/>
     
     
   </entry>
