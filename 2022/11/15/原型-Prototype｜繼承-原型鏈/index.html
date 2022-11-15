@@ -20,22 +20,21 @@
     var CONFIG = {"hostname":"elijahbecerra-chen.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="五倍紅寶石出礦坑紀錄轉職歷程中的技術文章">
+  <meta name="description" content="前言：    &amp;nbsp;&amp;nbsp;相信大家起初剛學習 JavaScript 時都是先從 console.log(&#39;Hello World!&#39;) 開始的吧？但不知道從什麼時候開始，對於 JavaScript   的學習認知，一下子如同以前學英文一樣，從子音母音一下子跳到 Be 動詞加 ing。而   JavaScript 則是閉包、作用域、變數提升、event   loop、this，樣樣都能讓">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Prototype｜繼承_原型鏈">
 <meta property="og:url" content="https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/index.html">
 <meta property="og:site_name" content="Elijah｜轉職筆記">
-<meta property="og:description" content="五倍紅寶石出礦坑紀錄轉職歷程中的技術文章">
+<meta property="og:description" content="前言：    &amp;nbsp;&amp;nbsp;相信大家起初剛學習 JavaScript 時都是先從 console.log(&#39;Hello World!&#39;) 開始的吧？但不知道從什麼時候開始，對於 JavaScript   的學習認知，一下子如同以前學英文一樣，從子音母音一下子跳到 Be 動詞加 ing。而   JavaScript 則是閉包、作用域、變數提升、event   loop、this，樣樣都能讓">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-11-15T02:35:07.000Z">
-<meta property="article:modified_time" content="2022-11-15T12:06:58.809Z">
+<meta property="article:modified_time" content="2022-11-15T18:38:14.134Z">
 <meta property="article:author" content="Elijah Chen">
 <meta property="article:tag" content="Prototype">
 <meta property="article:tag" content="繼承">
 <meta property="article:tag" content="原型鏈">
 <meta property="article:tag" content="物件導向">
 <meta property="article:tag" content="OOP">
-<meta property="article:tag" content="TEST">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/">
@@ -219,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2022-11-15 10:35:07 / 修改時間：20:06:58" itemprop="dateCreated datePublished" datetime="2022-11-15T10:35:07+08:00">2022-11-15</time>
+              <time title="創建時間：2022-11-15 10:35:07" itemprop="dateCreated datePublished" datetime="2022-11-15T10:35:07+08:00">2022-11-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-11-16 02:38:14" itemprop="dateModified" datetime="2022-11-16T02:38:14+08:00">2022-11-16</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -245,6 +250,100 @@
 
       
         
+<h1>前言：</h1>
+<p>
+  &nbsp;&nbsp;相信大家起初剛學習 JavaScript 時都是先從 <code>console.log('Hello World!')</code> 開始的吧？但不知道從什麼時候開始，對於 JavaScript
+  的學習認知，一下子如同以前學英文一樣，從子音母音一下子跳到 Be 動詞加 ing。而
+  JavaScript 則是閉包、作用域、變數提升、event
+  loop、this，樣樣都能讓你爬文到三更半夜，這些煎熬我也正在經歷，也是為什麼我想要開始用技術部落格來記錄下我開竅的那些
+  moment
+  跟分享那些使我開竅的切入點，希望可以幫到更多為此感到水生火熱的朋友們，上面提到的觀念我也都會再陸續發布文章。
+</p>
+<span id="more"></span>
+<p style="color: #ff0088">（ 如果在文章中有錯誤的資訊提供，還勞煩高手賜教，我也會盡快更改文章內容！）</p>
+
+<h2 style="color: rgb(239, 184, 19)">心靈雞湯時刻還是要有的！</h2>
+&nbsp;&nbsp;回頭想想，不知道從什麼時候開始，有些笑話只有你懂、有些東西只有你覺得厲害跟有趣，比如說：
+<li>一張門牌顯示 404 的照片。</li>
+<li><code>console.log('b' + 'a' + + 'a' + 'a')</code> 為什麼是 baNaNa？</li>
+<li>聖鬥士星矢在出招前為什麼總要先喊出招式名稱？（因為變數使用前要先宣告）</li>
+
+<br />
+
+<strong>以上，如果你嘴角有那麼點微微上揚，恭喜你長大了！（歡呼）</strong>
+
+<br />
+<hr />
+
+<h3 style="color: rgb(19, 239, 166)">
+  切入正題，什麼是原型、實例、繼承？
+</h3>
+<blockquote>
+  &nbsp;&nbsp;&nbsp;&nbsp;根據維基百科的解釋：「 JavaScript 是一門基於原型 ( OOP
+  - Object-oriented programming ) 所設計的程式語言。
+</blockquote>
+<br />
+
+<p>
+  &nbsp;&nbsp;&nbsp;&nbsp;JavaScript
+  支援物件導向，其設計方式和一般常見的程式語言不太一樣，程式語言通常分為下面兩種類型：
+</p>
+
+<li style="color: #33ccff">
+  <strong>基於類別的設計（ Class-Based ）：</strong>
+</li>
+<p>
+  &nbsp;&nbsp;有「 類別 - Class 」與「 實例 - Instance 」
+  的概念，其類別定義了某種物件的屬性，而實例是由類別產生的物件，例如：Java、C++、Ruby。
+</p>
+<li style="color: #33ccff">
+  <strong>基於原型的設計 ( Prototype-Based )：</strong>
+</li>
+<p>
+  &nbsp;&nbsp;沒有類別與實體的概念，在 JavaScript
+  的世界裡「萬物皆物件」，新物件在初始化時以原型物件為原型範本並獲得屬性。
+</p>
+<br />
+
+<p>&nbsp;&nbsp;接下來讓我們舉個例子來說明：</p>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Country</span>(<span class="params">name, capital, population</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">capital</span> = capital;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">population</span> = population;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> taiwan = <span class="keyword">new</span> <span class="title class_">Country</span>(<span class="string">&quot;台灣&quot;</span>, <span class="string">&quot;台北市&quot;</span>, <span class="string">&quot;2357萬人&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> japan = <span class="keyword">new</span> <span class="title class_">Country</span>(<span class="string">&quot;日本&quot;</span>, <span class="string">&quot;東京&quot;</span>, <span class="string">&quot;1.257 億人&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> thailand = <span class="keyword">new</span> <span class="title class_">Country</span>(<span class="string">&quot;泰國&quot;</span>, <span class="string">&quot;曼谷&quot;</span>, <span class="string">&quot;6995 萬人&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(taiwan);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 下方為Console.log(taiwan) 結果</span></span><br><span class="line"><span class="title class_">Country</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;台灣&#x27;</span></span><br><span class="line">    <span class="attr">capital</span>: <span class="string">&#x27;台北市&#x27;</span></span><br><span class="line">    <span class="attr">population</span>: <span class="string">&#x27;2357萬人&#x27;</span></span><br><span class="line">    <span class="attr">__proto__</span>: <span class="title class_">Object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;在 Ruby、C++ 這些基於類別的程式語言都會使用 <code>new</code> 這個關鍵字來產生新的實例(instance)，而 JavaScript 也把 <code>new</code> 拿來用了，但 JavaScript 並沒有類別，雖然有 class 語法，但那其實也只是語法糖衣，一切都是透過原型來運作， 以上方程式碼為例 <code>Country</code> 只是一個普通的函式，但如果我們用 <code>new</code> 運算子來呼叫的話，JavaScript 就會將它視為建構函式，並創造出新的實例(instance)。我們可以看到 <code>Country</code> 確實依照我們傳入的引數把 <code>taiwan</code> 的屬性給設定好了，而且在前面標註了 <code>Country</code> ，說明 <code>taiwan</code> 是 <code>Country</code> 的實例，而 <code>Country</code> 就是 <code>taiwan</code> 的原型，透過我們設定在 <code>Country</code> 裡的屬性，後續透過 <code>new</code> 產生出的實例(instance)都可以「繼承」原型裡的屬性。</p>
+<br>
+<h4 style="color: rgb(19, 239, 166)">關於 <code>new</code></h4>
+<p>&nbsp;&nbsp;當我們透過 <code>new</code> 創造出實例(instance)時，會發生下面兩件事</p>
+
+<li>實例(instance) 會被初始化，並透過建構函式新增屬性。</li>
+<li>實例(instance) 的 __proto__ 會被指向建構函式的 prototype。</li>
+
+<br>
+<h4 style="color: rgb(19, 239, 166)">那麼什麼是原型鏈呢？</h4>
+<p>&nbsp;&nbsp;因為物件之間的繼承關係，是一個接著一個不斷延續的，看起來就像條鎖鏈一樣，就像下方程式碼一樣</p>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">taiwan.<span class="property">__proto__</span> <span class="comment">// Country.prototype</span></span><br><span class="line">taiwan.<span class="property">__proto__</span>.<span class="property">__proto__</span> <span class="comment">// Object.prototype</span></span><br><span class="line">taiwan.<span class="property">__proto__</span>.<span class="property">__proto__</span>.<span class="property">__proto__</span>  <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;但原型鏈也是有終點的，<code>Object.prototype.__proto__</code> 指向的是 <code>null</code> ，代表 <code>Object</code> 是原型鏈的最頂端。</p>
+<br>
+
+<h4 style="color: rgb(19, 239, 166)">讓我們用原型的繼承原理來做一些實際運用吧！</h4>
+<p>&nbsp;&nbsp;在了解 prototype 的原理後，是可以讓我們在開發時帶來許多益處的，以效能來說，下方的程式碼對於 <code>show</code> 來說其實在每個實例中都是做同樣的事情，應該是可以抽出來共享的，如果用下方這種方式寫的話，反而會造成記憶體空間的浪費：</p>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Iphone</span>(<span class="params">model, color, app</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">model</span> = model;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">color</span> = color;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">app</span> = app;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">show</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`我用的是<span class="subst">$&#123;<span class="variable language_">this</span>.color&#125;</span>的<span class="subst">$&#123;<span class="variable language_">this</span>.model&#125;</span>，我下載了<span class="subst">$&#123;<span class="variable language_">this</span>.app&#125;</span>在我手機裡`</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> peter = <span class="keyword">new</span> <span class="title class_">Iphone</span>(<span class="string">&#x27;iPhone14&#x27;</span>, <span class="string">&#x27;星光色&#x27;</span>, <span class="string">&#x27;Line&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> tim = <span class="keyword">new</span> <span class="title class_">Iphone</span>(<span class="string">&#x27;iPhone13&#x27;</span>, <span class="string">&#x27;午夜色&#x27;</span>, <span class="string">&#x27;Facebook&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(peter.<span class="title function_">show</span>()) <span class="comment">// 我用的是星光色的iPhone14，我下載了Line在我手機裡</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tim.<span class="title function_">show</span>())   <span class="comment">// 我用的是午夜色的iPhone13，我下載了Facebook在我手機裡</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(peter.<span class="property">show</span> === tim.<span class="property">show</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<br />
+
+<p>&nbsp;&nbsp;透過我們所學到的 prototype 原理，我們可以將 <code>show</code> 抽出來放進去 <code>Iphone</code> 的原型，這樣就算是不同的實體(instance)，操作的還是同一個 function，因為它們呼叫的都是 <code>Iphone.prototype.show</code> ，寫法會像下方的程式碼：</p>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Iphone</span>(<span class="params">model, color, app</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">model</span> = model;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">color</span> = color;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">app</span> = app;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Iphone</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">show</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">    <span class="string">`我用的是<span class="subst">$&#123;<span class="variable language_">this</span>.color&#125;</span>的<span class="subst">$&#123;<span class="variable language_">this</span>.model&#125;</span>，我下載了<span class="subst">$&#123;<span class="variable language_">this</span>.app&#125;</span>在我手機裡`</span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> peter = <span class="keyword">new</span> <span class="title class_">Iphone</span>(<span class="string">&quot;iPhone14&quot;</span>, <span class="string">&quot;星光色&quot;</span>, <span class="string">&quot;Line&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> tim = <span class="keyword">new</span> <span class="title class_">Iphone</span>(<span class="string">&quot;iPhone13&quot;</span>, <span class="string">&quot;午夜色&quot;</span>, <span class="string">&quot;Facebook&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(peter.<span class="title function_">show</span>()); <span class="comment">// 我用的是星光色的iPhone14，我下載了Line在我手機裡</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(tim.<span class="title function_">show</span>()); <span class="comment">// 我用的是午夜色的iPhone13，我下載了Facebook在我手機裡</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(peter.<span class="property">show</span> === tim.<span class="property">show</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<br>
+
+<h4 style="color: rgb(239, 184, 19)">結論：</h4>
+<blockquote>&nbsp;&nbsp;每個函式(function) 都有 <code>prototype</code> ；每個物件(Object)都有 <code>__proto__</code> 。</blockquote>
+<blockquote>&nbsp;&nbsp;實例物件的 <code>__proto__</code> 繼承原型的 <code>prototype</code></blockquote>
+<br>
+<p>現在當你 <code>console.log([].__proto__ === Array.prototype)</code> 得到 <code>true</code> 時，是否已經能夠透過我們上面 Iphone 的程式碼例子，理解為什麼 <code>[]</code> 可以使用 <code>map</code> 方法了呢？</p>
+
     </div>
 
     
@@ -258,7 +357,6 @@
               <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/" rel="tag"># 原型鏈</a>
               <a href="/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/" rel="tag"># 物件導向</a>
               <a href="/tags/OOP/" rel="tag"># OOP</a>
-              <a href="/tags/TEST/" rel="tag"># TEST</a>
           </div>
 
         
@@ -329,6 +427,9 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">心靈雞湯時刻還是要有的！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">
+  切入正題，什麼是原型、實例、繼承？
+</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">關於 new</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">那麼什麼是原型鏈呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">讓我們用原型的繼承原理來做一些實際運用吧！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">結論：</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -357,7 +458,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

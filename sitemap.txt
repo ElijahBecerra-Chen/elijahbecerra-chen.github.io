@@ -11,5 +11,4 @@ https://elijahbecerra-chen.github.io/tags/%E7%B9%BC%E6%89%BF/
 https://elijahbecerra-chen.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/
 https://elijahbecerra-chen.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/
 https://elijahbecerra-chen.github.io/tags/OOP/
-https://elijahbecerra-chen.github.io/tags/TEST/
 https://elijahbecerra-chen.github.io/categories/JavaScript/
