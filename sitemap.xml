@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</loc>
+    <loc>https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/index.html</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/index.html</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/about/index.html</loc>
+    <loc>https://elijahbecerra-chen.github.io/about/index.html</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/14/My-first-blog-post/</loc>
+    <loc>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</loc>
     
     <lastmod>2022-11-13</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/google046f9444ec3cdcfc.html</loc>
+    <loc>https://elijahbecerra-chen.github.io/google046f9444ec3cdcfc.html</loc>
     
     <lastmod>2022-11-13</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/404.html</loc>
+    <loc>https://elijahbecerra-chen.github.io/404.html</loc>
     
     <lastmod>2022-11-13</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/categories/index.html</loc>
+    <loc>https://elijahbecerra-chen.github.io/categories/index.html</loc>
     
     <lastmod>2022-11-13</lastmod>
     
@@ -66,7 +66,7 @@
   
 
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git</loc>
+    <loc>https://elijahbecerra-chen.github.io/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -74,42 +74,42 @@
 
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/Prototype/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/Prototype/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E7%B9%BC%E6%89%BF/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/%E7%B9%BC%E6%89%BF/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/OOP/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/OOP/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/TEST/</loc>
+    <loc>https://elijahbecerra-chen.github.io/tags/TEST/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -118,7 +118,7 @@
 
   
   <url>
-    <loc>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/categories/JavaScript/</loc>
+    <loc>https://elijahbecerra-chen.github.io/categories/JavaScript/</loc>
     <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

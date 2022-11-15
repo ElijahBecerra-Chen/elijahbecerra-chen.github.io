@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>My first blog post</title>
-    <url>/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/14/My-first-blog-post/</url>
+    <url>/2022/11/14/My-first-blog-post/</url>
     <content><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> hi = <span class="string">&quot;Hello World!&quot;</span>;</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title>原型-Prototype｜繼承_原型鏈</title>
-    <url>/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</url>
+    <url>/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>JavaScript</category>

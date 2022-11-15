@@ -3,11 +3,11 @@
   <title>Elijah｜轉職筆記</title>
   
   <subtitle>夢想還是要有的，萬一實現了呢？</subtitle>
-  <link href="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/atom.xml" rel="self"/>
+  <link href="https://elijahbecerra-chen.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/"/>
+  <link href="https://elijahbecerra-chen.github.io/"/>
   <updated>2022-11-15T10:53:25.189Z</updated>
-  <id>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/</id>
+  <id>https://elijahbecerra-chen.github.io/</id>
   
   <author>
     <name>Elijah Chen</name>
@@ -18,35 +18,35 @@
   
   <entry>
     <title>原型-Prototype｜繼承_原型鏈</title>
-    <link href="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/"/>
-    <id>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</id>
+    <link href="https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/"/>
+    <id>https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</id>
     <published>2022-11-15T02:35:07.000Z</published>
     <updated>2022-11-15T10:53:25.189Z</updated>
     
     
     
     
-    <category term="JavaScript" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://elijahbecerra-chen.github.io/categories/JavaScript/"/>
     
     
-    <category term="Prototype" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/Prototype/"/>
+    <category term="Prototype" scheme="https://elijahbecerra-chen.github.io/tags/Prototype/"/>
     
-    <category term="繼承" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E7%B9%BC%E6%89%BF/"/>
+    <category term="繼承" scheme="https://elijahbecerra-chen.github.io/tags/%E7%B9%BC%E6%89%BF/"/>
     
-    <category term="原型鏈" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/"/>
+    <category term="原型鏈" scheme="https://elijahbecerra-chen.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%8F%88/"/>
     
-    <category term="物件導向" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/"/>
+    <category term="物件導向" scheme="https://elijahbecerra-chen.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/"/>
     
-    <category term="OOP" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/OOP/"/>
+    <category term="OOP" scheme="https://elijahbecerra-chen.github.io/tags/OOP/"/>
     
-    <category term="TEST" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/tags/TEST/"/>
+    <category term="TEST" scheme="https://elijahbecerra-chen.github.io/tags/TEST/"/>
     
   </entry>
   
   <entry>
     <title>My first blog post</title>
-    <link href="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/14/My-first-blog-post/"/>
-    <id>https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/2022/11/14/My-first-blog-post/</id>
+    <link href="https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/"/>
+    <id>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</id>
     <published>2022-11-13T17:19:54.000Z</published>
     <updated>2022-11-13T17:56:29.207Z</updated>
     
@@ -57,7 +57,7 @@
     
     
     
-    <category term="JavaScript" scheme="https://github.com/ElijahBecerra-Chen/elijahbecerra-chen.github.io.git/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://elijahbecerra-chen.github.io/categories/JavaScript/"/>
     
     
   </entry>
