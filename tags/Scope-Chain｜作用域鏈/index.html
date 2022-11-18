@@ -23,27 +23,27 @@
   <meta name="description" content="五倍紅寶石出礦坑紀錄轉職歷程中的技術文章">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Elijah｜轉職筆記">
-<meta property="og:url" content="https://elijahbecerra-chen.github.io/index.html">
+<meta property="og:url" content="https://elijahbecerra-chen.github.io/tags/Scope-Chain%EF%BD%9C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%8F%88/index.html">
 <meta property="og:site_name" content="Elijah｜轉職筆記">
 <meta property="og:description" content="五倍紅寶石出礦坑紀錄轉職歷程中的技術文章">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Elijah Chen">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://elijahbecerra-chen.github.io/">
+<link rel="canonical" href="https://elijahbecerra-chen.github.io/tags/Scope-Chain%EF%BD%9C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%8F%88/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>Elijah｜轉職筆記</title>
+  <title>標籤: Scope Chain｜作用域鏈 | Elijah｜轉職筆記</title>
   
 
 
@@ -182,262 +182,50 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content tag">
             
-      
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://elijahbecerra-chen.github.io/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/hexo_avatar_pic.jpg">
-      <meta itemprop="name" content="Elijah Chen">
-      <meta itemprop="description" content="五倍紅寶石出礦坑</br>紀錄轉職歷程中的技術文章">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Elijah｜轉職筆記">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="post-title-link" itemprop="url">Scope｜作用域</a>
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">Scope Chain｜作用域鏈
+          <small>標籤</small>
         </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-11-18 18:28:04 / 修改時間：21:40:10" itemprop="dateCreated datePublished" datetime="2022-11-18T18:28:04+08:00">2022-11-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-          <h1>前言：</h1>
-
-<blockquote style="color: rgb(239, 184, 19)">「 為什麼 console.log 或是 return 回來的結果跟我原本想的不一樣？」</blockquote>
-<br>
-
-<p>&nbsp;&nbsp;相信這是很多初學 JavaScript 的人都會遇到的情況，其實很多時候會發生這樣情況的原因很可能是因為沒有搞清楚當前變數的作用域在哪，或是不理解作用域鏈運作的流向所導致。</p><br>
-（ 當然有的時候可能是因為自己對於資料型別以及方法回傳值的不夠熟悉所導致 ）
-<p>&nbsp;&nbsp;但別擔心！這就是我為什麼要寫這篇文章的原因，畢竟我也曾在「蛤？為什麼印出的是這個？」的情況中水深火熱。</p>
-  <br>
-<strong style="color: #ff0088">開始前先跟著我說三次：「作用域一點都難不倒我，作用域超簡單的！」</strong>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-11-18T18:28:04+08:00"
+              content="2022-11-18">
+          11-18
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/" itemprop="url">
+            <span itemprop="name">Scope｜作用域</span>
+          </a>
+      </div>
+
+    </header>
   </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/hexo_avatar_pic.jpg">
-      <meta itemprop="name" content="Elijah Chen">
-      <meta itemprop="description" content="五倍紅寶石出礦坑</br>紀錄轉職歷程中的技術文章">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Elijah｜轉職筆記">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/" class="post-title-link" itemprop="url">Prototype｜繼承_原型鏈</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2022-11-15 10:35:07" itemprop="dateCreated datePublished" datetime="2022-11-15T10:35:07+08:00">2022-11-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-11-16 02:38:14" itemprop="dateModified" datetime="2022-11-16T02:38:14+08:00">2022-11-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1>前言：</h1>
-<p>
-  &nbsp;&nbsp;相信大家起初剛學習 JavaScript 時都是先從 <code>console.log('Hello World!')</code> 開始的吧？但不知道從什麼時候開始，對於 JavaScript
-  的學習認知，一下子如同以前學英文一樣，從子音母音一下子跳到 Be 動詞加 ing。而
-  JavaScript 則是閉包、作用域、變數提升、event
-  loop、this，樣樣都能讓你爬文到三更半夜，這些煎熬我也正在經歷，也是為什麼我想要開始用技術部落格來記錄下我開竅的那些
-  moment
-  跟分享那些使我開竅的切入點，希望可以幫到更多為此感到水生火熱的朋友們，上面提到的觀念我也都會再陸續發布文章。
-</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
+  </div>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/hexo_avatar_pic.jpg">
-      <meta itemprop="name" content="Elijah Chen">
-      <meta itemprop="description" content="五倍紅寶石出礦坑</br>紀錄轉職歷程中的技術文章">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Elijah｜轉職筆記">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/14/My-first-blog-post/" class="post-title-link" itemprop="url">My first blog post</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2022-11-14 01:19:54" itemprop="dateCreated datePublished" datetime="2022-11-14T01:19:54+08:00">2022-11-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-11-15 18:53:20" itemprop="dateModified" datetime="2022-11-15T18:53:20+08:00">2022-11-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> hi = <span class="string">&quot;Hello World!&quot;</span>;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/14/My-first-blog-post/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
 

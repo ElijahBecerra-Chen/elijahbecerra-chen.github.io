@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://elijahbecerra-chen.github.io/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    
+    <lastmod>2022-11-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://elijahbecerra-chen.github.io/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</loc>
+    
+    <lastmod>2022-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -22,16 +40,7 @@
   <url>
     <loc>https://elijahbecerra-chen.github.io/about/index.html</loc>
     
-    <lastmod>2022-11-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://elijahbecerra-chen.github.io/2022/11/14/My-first-blog-post/</loc>
-    
-    <lastmod>2022-11-13</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -72,6 +81,55 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Scope%EF%BD%9C%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Lexical-Scope%EF%BD%9C%E9%9D%9C%E6%85%8B%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Scope-Chain%EF%BD%9C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%8F%88/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Global-Scope%EF%BD%9C%E5%85%A8%E5%9F%9F%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Local-Scope%EF%BD%9C%E5%8D%80%E5%9F%9F%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Block-Scope%EF%BD%9C%E5%8D%80%E5%A1%8A%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://elijahbecerra-chen.github.io/tags/Function-Scope%EF%BD%9C%E5%87%BD%E5%BC%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2022-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://elijahbecerra-chen.github.io/tags/Prototype/</loc>

@@ -12,6 +12,143 @@
       </categories>
   </entry>
   <entry>
+    <title>Scope｜作用域</title>
+    <url>/2022/11/18/%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h1>前言：</h1>
+
+<blockquote style="color: rgb(239, 184, 19)">「 為什麼 console.log 或是 return 回來的結果跟我原本想的不一樣？」</blockquote>
+<br>
+
+<p>&nbsp;&nbsp;相信這是很多初學 JavaScript 的人都會遇到的情況，其實很多時候會發生這樣情況的原因很可能是因為沒有搞清楚當前變數的作用域在哪，或是不理解作用域鏈運作的流向所導致。</p><br>
+（ 當然有的時候可能是因為自己對於資料型別以及方法回傳值的不夠熟悉所導致 ）
+<p>&nbsp;&nbsp;但別擔心！這就是我為什麼要寫這篇文章的原因，畢竟我也曾在「蛤？為什麼印出的是這個？」的情況中水深火熱。</p>
+  <br>
+<strong style="color: #ff0088">開始前先跟著我說三次：「作用域一點都難不倒我，作用域超簡單的！」</strong>
+<span id="more"></span>
+<br>
+<hr>
+<h2 style="color: rgb(19, 239, 166)">什麼是作用域（ Scope ）？</h2>
+
+<p><strong>工程師的好幫手 MDN 是這樣解釋的：</strong></p>
+<blockquote>Scope is the current context of execution in which values and expressions are "visible" or can be referenced. If a variable or expression is not in the current scope, it will not be available for use. <br>
+    <strong>白話文： </strong>變數在程式碼中可以被看到或被取用的作用範圍</blockquote>
+    <br>
+    <p>&nbsp;&nbsp;Ps. 沒錯，不要懷疑，真的就是這麼簡單，只要記得這個簡單的觀念就好。每當在讀程式碼時就問自己：「 現在變數在哪個作用域種類？現在的作用域鏈是如何流動的？」</p>
+    <br>
+
+<h2 style="color: rgb(19, 239, 166)" >靜態作用域（ Static scope ）</h2>
+<p>&nbsp;&nbsp;又稱為「 詞彙作用域 - Lexical Environment 」，一開始我接觸到這個字時覺得超難理解的… 讓我來為大家直接做的白話文總結：</p> <br>
+<blockquote>&nbsp;&nbsp;JavaScript 這個程式語言採用的是靜態作用域的方法，靜態作用域是以「 宣告函式 」的地方當作作用域鏈，而動態作用域的是以「 呼叫函式 」的地方當作作用域鏈，靜態作用域代表著區塊間的包裹關係，包裹在內層區塊的變數不會被外層取用，但是！！外層區塊的變數還是可以被內層區塊使用。
+</blockquote><br>
+<strong style="color: rgb(239, 184, 19)">（ 別擔心，我們接下來會用程式碼來示範，畢竟程式語言是工程師之間的共通語言，我懂！）</strong>
+<br>
+
+<h2 style="color: rgb(19, 239, 166)">作用域（ Scope ） 種類：</h2>
+
+<li style="color: #33ccff" >全域作用域（ Global Scope ）</li>
+<p>&nbsp;&nbsp;只要在全域作用域宣告的變數，任何地方都可以存取與使用。</p>
+
+<li style="color: #33ccff">區域作用域（ Local Scope ）</li>
+<p >&nbsp;&nbsp;只在 「 函式作用域 - Function Scope 」＆ 「 區塊作用域 - Block Scope 」可以被存取與使用。</p>
+
+<p><strong style="color: #ff0088">而區塊作用域又分為：</strong></p>
+<li style="color: #33ccff">函式作用域（ Function Scope ）</li>
+<li style="color: #33ccff">區塊作用域（ Block Scope ）</li>
+
+<br>
+
+<h3 style="color: rgb(239, 184, 19)">全域作用域（ Global Scope）</h3>
+<p>&nbsp;&nbsp;只要在全域作用域宣告的變數，任何地方都可以存取與使用。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> elijah = <span class="string">&#x27;努力學習的熱血青年&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">info</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(elijah);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">info</span>() <span class="comment">// 努力學習的熱血青年</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 style="color: rgb(239, 184, 19)">函式作用域（ Function Scope ）</h3>
+<p>&nbsp;&nbsp;只有在 function 裡面才有辦法取用在 function 裡宣告的變數。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">info</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> elijah = <span class="string">&quot;努力學習的熱血青年&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(elijah); <span class="comment">// elijah is not defined</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 style="color: rgb(239, 184, 19)">區塊作用域（ Block Scope ）</h3>
+
+<p>&nbsp;&nbsp;區塊作用域可取用的變數會跟用 <strong>var</strong> 還是 <strong>let</strong> 或 <strong>const</strong> 有關。 </p>
+
+<p><strong>如果我們用 var :</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> hi = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (hi) &#123;</span><br><span class="line">  <span class="keyword">var</span> hey = <span class="string">&#x27;你找到我了&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(hey); <span class="comment">// 你找到我了</span></span><br></pre></td></tr></table></figure>
+<br>
+<strong>如果我們用 let :</strong>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> hi = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (hi) &#123;</span><br><span class="line">  <span class="keyword">let</span> hey = <span class="string">&#x27;你找到我了&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(hey); <span class="comment">// hey is not defined</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<p>&nbsp;&nbsp;看到了嗎？ let 定義的 hey 被關在了 Block 裡面，無法被讀取到，但 var 定義的 hey 卻這樣順順地往下被讀取到了。這部分稍微帶到 var、 let 、 const （但由於本章節主要是要講解 Scope，所以不會講太詳細）。寫 JavaScript 的工程師都知道， var  是個不安分的小傢伙，因為 Block無法包住  var ， var  只有辦法被 function 給包住，以至於  var 會造成「 全域污染 」，同時，如果在全域範圍使用 var 也是會造成全域污染的喔！相信有些人看到這裡已經先皺眉頭了，<span style="color: #33ccff">心想：「什麼是全域污染？」</span>，我這邊簡單做一下解釋：</p>
+<p>&nbsp;&nbsp;當我們打開瀏覽器的 console 並在 console 打上 var a = 2 這段程式碼後，打上 window ，這時我們可以看到 window 出現了這個變數的存取結果。為什麼全域污染很可怕呢？因為在全域範圍定義變數會造成<span style="color: #ff0088">「 衝突 」</span>，同時也與<span style="color: #ff0088">「 最小權限原則 」</span>的開發原則背道而馳。給大家個情境：</p>
+
+<br> 
+<strong style="color: rgb(239, 184, 19)">今天我們（ 假設 ）因為不知道 alert 這個方法而這樣定義了：</strong> 
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> alert = <span class="number">123</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">// 這時我們使用 alert(&#x27;Hi&#x27;) 時就會出現 Uncaught TypeError: alert is not a function </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;上面這樣的情況就是全域污染造成的結果以及衝突，但還好，工程師都有著懶惰的「美德」，因此 let 與 const 出生了，它們解決了 var 帶來的痛點，當我們用當我們用 let a = 2 時，window 並不會存取這個變數，並且 let & const 可以被 Block 所包住（當然！ let & const 還有很多好處，有機會我再寫一篇來講解）。</p>
+<p>&nbsp;&nbsp;上述總結，既然 let 解決了諸多 var 帶來的痛點，那我們就好好利用這個工具，除非我們是在一個一個 function 裡用 var ，但還是建議都用 let & const 會是比較好的，畢竟我們也不想有天程式運作結果不如預期，回頭找了半天才發現是因為 var 所造成的。</p>
+
+<br>
+
+<h2 style="color: rgb(19, 239, 166)" >作用域鏈（ Scope Chain ）</h2>
+<p>&nbsp;&nbsp;作用域鏈目的在當我們在該執行環境中的範圍找不到變數時，會透過作用域鏈的規範一層一層往外找，就像我們在讀程式碼時會一行一行往下看，直到看到一個 function 被呼叫，才會跳到那個 function 去執行該 function，如果還是找不到變數，就會再往全域作用域（ Global Scope）去找。</p>
+
+<br>
+<strong style="color: rgb(239, 184, 19)">下面用程式碼來說明：</strong>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> apple = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">count</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> apple = <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">count2</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(apple)  </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">count2</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">count</span>(); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+<strong style="color: rgb(239, 184, 19)">你覺得 apple 會印出什麼結果呢？</strong>
+
+<p><strong>用作用域鏈（ Scope Chain ）的邏輯來看：</strong></p>
+<ol>
+    <li> count 方法被呼叫，移動到 function count 的作用域。</li>
+    <li> count2 方法被呼叫，移動到 function count2 的作用域。</li>
+    <li> console.log( apple ) 但是 count2 裡面沒有 apple，所以往外找。</li>
+    <li> 最後印出 2 。</li>
+</ol>
+
+<br>
+
+<p><strong style="color: rgb(239, 184, 19)">再來挑戰看看下面的程式碼：</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> orange = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">count</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> orange = <span class="number">2</span>;</span><br><span class="line">  <span class="title function_">count2</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">count2</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(orange) </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">count</span>(); <span class="comment">// orange </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+<strong style="color: rgb(239, 184, 19)">你覺得 orange 會印出什麼結果呢？</strong>
+
+
+<p><strong>用作用域鏈（ Scope Chain ）的邏輯來看：</strong></p>
+<ol>
+    <li> count 方法被呼叫，移動到 function count 的作用域（雖然 orange 有被宣告，但並沒有被帶出 block 範圍）。</li>
+    <li> count2 方法被呼叫，移動到function count2 的作用域。</li>
+    <li> console.log( orange ) 但是 count2 裡面沒有 apple，所以往外找。</li>
+    <li> 找到外層（ 全域作用域 ）的 orange</li>
+    <li> 最後印出 1</li>
+</ol>
+
+<br>
+
+<h2 style="color: #ff0088" >最後，你覺得下方印出的結果是什麼呢？</h2>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;Peter&quot;</span></span><br><span class="line"><span class="keyword">const</span> hobby = <span class="string">&quot;soccer&quot;</span></span><br><span class="line"><span class="keyword">const</span> age = <span class="number">15</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">introduction</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> name = <span class="string">&quot;Elijah&quot;</span></span><br><span class="line">  <span class="keyword">const</span> age = <span class="number">28</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Hi, I&#x27;m <span class="subst">$&#123;name&#125;</span>, I&#x27;m <span class="subst">$&#123;age&#125;</span> years old, and I like playing <span class="subst">$&#123;hobby&#125;</span>`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">introduction</span>())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>是否跟你想的一樣呢？!</p>]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>Scope｜作用域</tag>
+        <tag>Lexical Scope｜靜態作用域</tag>
+        <tag>Scope Chain｜作用域鏈</tag>
+        <tag>Global Scope｜全域作用域</tag>
+        <tag>Local Scope｜區域作用域</tag>
+        <tag>Block Scope｜區塊作用域</tag>
+        <tag>Function Scope｜函式作用域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Prototype｜繼承_原型鏈</title>
     <url>/2022/11/15/%E5%8E%9F%E5%9E%8B-Prototype%EF%BD%9C%E7%B9%BC%E6%89%BF-%E5%8E%9F%E5%9E%8B%E9%8F%88/</url>
     <content><![CDATA[
